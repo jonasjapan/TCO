@@ -2,3 +2,6 @@ name: test_Car
 brand: Volvo
 price:  100000
 years_to_own: 3
+expected_sell_value: 60000
+tax_yearly: 1500
+services: [2000, 5000, 2000]

@@ -2,6 +2,7 @@
     """
 from typing import List, Union
 import yaml  # pylint: disable=import-error
+from car import Car
 
 
 def total_service(services: List[int]) -> int:
@@ -49,6 +50,11 @@ def main() -> None:
         mycar2 = yaml.safe_load(stream)
     if validate_yaml(mycar2) == -1:
         raise ValueError("Something wrong in the yaml")
+
+    # test_car = Car(mycar2["name"], mycar2["brand"], mycar2["price"])
+    # print(test_car)
+    my_car: Car = Car("./configs/test_car.yaml")
+    print(my_car)
 
 
 if __name__ == "__main__":
